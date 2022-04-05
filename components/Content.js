@@ -1,12 +1,25 @@
-import React from "react"
-import Menu from "./Menu"
+import React from "react";
+import Card from "./Card";
+import Transaction from "./Transaction";
 const Content = () => {
   return (
     <>
-      <main></main>
-      <footer className="fixed bottom-0"><Menu></Menu></footer>
-    </>
-  )
+      <div className="text-white not-italic">
+        <div
+          className="text-4xl p-6"
+          style={{ fontFamily: "Abel, sans-serif" }}
+        >
+          Cards
+        </div>
+        <div className="p-6">
+          <Card />
+        </div>
+        <div className=" h-96 mt-10">
+        <Transaction/>
 
-}
-export default Content
+        </div>
+      </div>
+    </>
+  );
+};
+export default Content;
