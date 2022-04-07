@@ -6,7 +6,7 @@ const Content = () => {
     <>
       <div className="text-white not-italic">
         <div
-          className="text-4xl p-6"
+          className="text-4xl"
           style={{ fontFamily: "Abel, sans-serif" }}
         >
           Cards
@@ -14,7 +14,7 @@ const Content = () => {
         <div className="p-6">
           <Card />
         </div>
-        <div className=" h-96 mt-10">
+        <div className=" h-96 mt-7">
         <Transaction/>
 
         </div>

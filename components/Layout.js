@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <div className="w-screen h-screen bg-gradient-to-b from-gray-800 to-fuchsia-900">
-        <div className="absolute top-36 left-9 z-10 w-100 h-100">
+        <div className="absolute top-24 left-9 z-10 w-100 h-100">
           <Image src="/circle.svg" alt="Vercel Logo" width={35} height={36} />
         </div>
 
