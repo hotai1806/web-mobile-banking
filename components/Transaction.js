@@ -5,6 +5,7 @@ const main_cerency = " VND";
 
 let mock_transaction = [
   {
+    id: "1",
     money: "VND 5.000,000,000.00",
     date_time: "09/25/2020",
     type: "Deposit",
@@ -12,6 +13,7 @@ let mock_transaction = [
     description: "Deposit from Vietcombank",
   },
   {
+    id: 2,
     money: "VND 5.000,000,000.00",
     date_time: "09/25/2020",
     type: "Credit",
@@ -34,7 +36,7 @@ const Title = () => {
   return (
     <div className=" p-2">
       <div className=" text-2xl">Details</div>
-      <div className="">
+      <div className=" ">
         <Image src={"/vietnam.png"} width={19} height={13} />
         {main_cerency}
       </div>
@@ -55,10 +57,8 @@ const TransactionRecord = ({ money, date_time, from, description, type }) => {
         )}
       </div>
       <div>
-        <div className=" text-base"></div>
-        {money}
-        <div className=" text-sm"></div>
-        {date_time}
+        <div className=" text-base">{money}</div>
+        <div className=" text-sm">{date_time}</div>
       </div>
       <div>
         <div className=" text-base">{description}</div>
@@ -68,12 +68,13 @@ const TransactionRecord = ({ money, date_time, from, description, type }) => {
   );
 };
 
-const TransactionHistory = (mock_transaction) => {
+const TransactionHistory = ({ mock_transaction }) => {
   return (
     <div>
       {mock_transaction?.map((item) => {
         return (
           <TransactionRecord
+            key={item.id}
             money={item.money}
             date_time={item.date_time}
             from={item.from}
@@ -91,7 +92,7 @@ const Transaction = () => {
     <>
       <div className="divide-y px-4 divide-[#CDCDDF] rounded-t-2xl bg-[#F0F2F4]/90  backdrop-blur-sm not-italic text-black font-['Abel, sans-serif']">
         <Title />
-        <TransactionHistory mock_transaction />
+        <TransactionHistory mock_transaction={mock_transaction} />
       </div>
     </>
   );

@@ -7,3 +7,9 @@ a{
   text-decoration: none;
   color: inherit;
 }
+
+@layer base {
+  html {
+    font-family: Abel, sans-serif;
+  }
+}
